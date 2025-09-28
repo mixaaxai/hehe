@@ -111,7 +111,7 @@
         });
 
         document.getElementById('yesButton').addEventListener('click', function() {                 //YESSSS button
-            document.getElementById('question').innerText = 'YIEEEEE SAN DATE NATIN? OTW';
+            document.getElementById('question').innerText = 'YESSS LET'S GOO HEHEHE';
             for (var i = 0; i < 100; i++) {
                 var heart = document.createElement('div');
                 heart.className = 'heart';
