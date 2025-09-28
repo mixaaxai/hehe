@@ -72,35 +72,41 @@
         var noClickCount = 0;
         document.getElementById('noButton').addEventListener('click', function() {
             noClickCount++;
+            var yesBtn = document.getElementById('yesButton');
+            var msg = document.getElementById('message');
+            // Only change YES size for first 3 clicks:
             if (noClickCount == 1) {
-                document.getElementById('yesButton').style.fontSize = '30px';
+                yesBtn.style.fontSize = '30px';
             } else if (noClickCount == 2) {
                 this.style.fontSize = '10px';
-                document.getElementById('yesButton').style.fontSize = '40px';
+                yesBtn.style.fontSize = '40px';
             } else if (noClickCount == 3) {
-                document.getElementById('yesButton').style.fontSize = '90px';
+                yesBtn.style.fontSize = '90px';
                 this.style.fontSize = '7px';
-            } else if (noClickCount == 4) {
+            } 
+            // Move NO button for click 4 and up
+            if (noClickCount >= 4 && noClickCount < 15) {
                 this.style.position = 'absolute';
-                this.style.left = Math.random() * window.innerWidth + 'px';
-                this.style.top = Math.random() * window.innerHeight + 'px';
-            } else if (noClickCount >= 5 && noClickCount < 15) {
-                this.style.position = 'absolute';
-                this.style.left = Math.random() * window.innerWidth + 'px';
-                this.style.top = Math.random() * window.innerHeight + 'px';
-                document.getElementById('message').innerText = 'Ayaw mo talaga chelly??';
-                document.getElementById('message').style.position = 'absolute';
-                document.getElementById('message').style.left = this.style.left;
-                document.getElementById('message').style.top = parseFloat(this.style.top) + 50 + 'px';
-            } else if (noClickCount == 15) {
-                document.getElementById('message').innerText = 'wala na nasira na blehh :c';
+                this.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+                this.style.top = Math.random() * (window.innerHeight - 50) + 'px';
+            }
+            // Custom message starting at the 5th click
+            if (noClickCount >= 5 && noClickCount < 15) {
+                msg.innerText = 'Ayaw mo talaga chelly??';
+                msg.style.position = 'absolute';
+                msg.style.left = this.style.left;
+                msg.style.top = (parseFloat(this.style.top) + 50) + 'px';
+            }
+            // At 15th click
+            if (noClickCount == 15) {
+                msg.innerText = 'wala na nasira na blehh :c';
                 this.disabled = true;
                 this.style.color = 'grey';
-                document.getElementById('message').innerText = 'wala naaaa bleh bleh :c';
+                msg.innerText = 'wala naaaa bleh bleh :c';
             }
         });
         document.getElementById('yesButton').addEventListener('click', function() {
-            document.getElementById('question').innerText = 'YESSS LET'S GOO hehehe';
+            document.getElementById('question').innerText = 'YESSS LET\'S GOO hehehe';
             for (var i = 0; i < 100; i++) {
                 var heart = document.createElement('div');
                 heart.className = 'heart';
