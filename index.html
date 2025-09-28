@@ -84,11 +84,7 @@
                 this.style.position = 'absolute';
                 this.style.left = Math.random() * window.innerWidth + 'px';
                 this.style.top = Math.random() * window.innerHeight + 'px';
-            } else if (noClickCount >= 5 && noClickCount < 10) {
-                this.style.position = 'absolute';
-                this.style.left = Math.random() * window.innerWidth + 'px';
-                this.style.top = Math.random() * window.innerHeight + 'px';
-            } else if (noClickCount >= 10 && noClickCount < 15) {
+            } else if (noClickCount >= 5 && noClickCount < 15) {
                 this.style.position = 'absolute';
                 this.style.left = Math.random() * window.innerWidth + 'px';
                 this.style.top = Math.random() * window.innerHeight + 'px';
@@ -104,7 +100,7 @@
             }
         });
         document.getElementById('yesButton').addEventListener('click', function() {
-            document.getElementById('question').innerText = 'YESSS LET\'S GOO hehehe';
+            document.getElementById('question').innerText = 'YESSS LET'S GOO hehehe';
             for (var i = 0; i < 100; i++) {
                 var heart = document.createElement('div');
                 heart.className = 'heart';
