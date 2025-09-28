@@ -90,19 +90,40 @@
                 this.style.left = Math.random() * (window.innerWidth - 100) + 'px';
                 this.style.top = Math.random() * (window.innerHeight - 50) + 'px';
             }
-            // Custom message starting at the 5th click
-            if (noClickCount >= 5 && noClickCount < 15) {
+            // Custom messages
+            if (noClickCount == 5) {
                 msg.innerText = 'Ayaw mo talaga chelly??';
+            } else if (noClickCount == 6) {
+                msg.innerText = 'sure kana chelly??';
+            } else if (noClickCount == 7) {
+                msg.innerText = 'tara na kasiii';
+            } else if (noClickCount == 8) {
+                msg.innerText = 'partner na tayo ohh';
+            } else if (noClickCount == 9) {
+                msg.innerText = 'sigee naaaaa poo';
+            } else if (noClickCount == 10) {
+                msg.innerText = 'sure na sure na chelly??';
+            } else if (noClickCount == 11) {
+                msg.innerText = 'sige na ohh';
+            } else if (noClickCount == 12) {
+                msg.innerText = 'partner na po us sa prom';
+            } else if (noClickCount == 13) {
+                msg.innerText = 'click mo na yung yesss hehe';
+            } else if (noClickCount == 14) {
+                msg.innerText = 'masisira na yung no';
+            } else if (noClickCount < 5) {
+                msg.innerText = '';
+            }
+            // Match message position to NO button
+            if (noClickCount >= 5 && noClickCount < 15) {
                 msg.style.position = 'absolute';
                 msg.style.left = this.style.left;
                 msg.style.top = (parseFloat(this.style.top) + 50) + 'px';
             }
-            // At 15th click
             if (noClickCount == 15) {
                 msg.innerText = 'wala na nasira na blehh :c';
                 this.disabled = true;
                 this.style.color = 'grey';
-                msg.innerText = 'wala naaaa bleh bleh :c';
             }
         });
         document.getElementById('yesButton').addEventListener('click', function() {
