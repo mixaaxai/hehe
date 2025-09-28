@@ -66,7 +66,7 @@
 </head>
 <body>
     <div id="content">
-        <h2 id="question">Will be my prom date chellyyy?</h2>
+        <h2 id="question">Will you be my prom date chellyyy?</h2>
         <button id="yesButton">YES</button>
         <button id="noButton">NO</button>
         <p id="message"></p>
